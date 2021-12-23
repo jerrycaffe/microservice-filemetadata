@@ -1,16 +1,18 @@
 package com.microservice.file.filemetadate.services;
 
-import com.microservice.file.filemetadate.entity.FileAnalyzeResponse;
+import com.microservice.file.filemetadate.entity.FileAnalyze;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-public class FileAnalyzeServiceImpl implements FileAnalyzeService{
+@Service
+public class FileAnalyzeServiceImpl implements FileAnalyzer {
     @Override
-    public FileAnalyzeResponse fileAnalyze(MultipartFile file) {
+    public FileAnalyze fileAnalyze(MultipartFile file) {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         Long fileSize = file.getSize();
         String fileType = file.getContentType();
 
-        return new FileAnalyzeResponse(fileName, fileSize, fileType);
+        return new FileAnalyze(fileName, fileSize, fileType);
     }
 }

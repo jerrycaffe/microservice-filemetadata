@@ -1,12 +1,12 @@
 package com.microservice.file.filemetadate.entity;
 
-public class FileAnalyzeResponse {
+public class FileAnalyze {
     private String fileName;
 
     private String fileType;
     private long fileSize;
 
-    public FileAnalyzeResponse(String name, Long size, String type){
+    public FileAnalyze(String name, Long size, String type){
         fileName = name;
         fileSize =size;
         fileType = type;

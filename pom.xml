@@ -11,10 +11,10 @@
 	<groupId>com.microservice.file</groupId>
 	<artifactId>file-metadate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>file-metadate</name>
+	<name>File Metadata Microservice</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
